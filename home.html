@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-grid>
+        <ion-row>  
+            <ion-col > 
+                <ion-item>
+                    <ion-input [(ngModel)]="recevoir_saisi" [(ngModel)]="nbre" type="text">recevoir_saisi  </ion-input>
+                  </ion-item>
+            </ion-col>     
+    </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row>  
+
+          <ion-col > <button ion-button color="light"(click)="add(7)" >7</button></ion-col>
+          <ion-col> <button  ion-button color="light"(click)="add(8)">8</button></ion-col>
+          <ion-col ><button  ion-button color="light"(click)="add(9)">9</button></ion-col>
+          <ion-col ><button  ion-button color="danger">ON/C</button></ion-col>
+          <ion-col ><button  ion-button color="danger">DEL</button></ion-col>
+                  
+    </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row>  
+           
+            <ion-col >   <button ion-button  color="light" (click)="add(4)">4</button></ion-col>
+              <ion-col >  <button  ion-button color="light"(click)="add(5)">5</button></ion-col>
+                <ion-col >  <button  ion-button color="light"(click)="add(6)">6</button></ion-col>
+                <ion-col ><button  ion-button color="dark"(click)="addcaractere('*')">*</button></ion-col>
+                <ion-col ><button  ion-button color="dark" (click)="addcaractere('/')">/</button></ion-col>
+                 
+    </ion-row>
+    </ion-grid>
+  <ion-grid>
+      <ion-row>  
+        <ion-col > <button  ion-button color="light"(click)="add(1)">1</button>  </ion-col>  
+            <ion-col > <button  ion-button color="light"(click)="add(2)">2</button>  </ion-col>  
+            <ion-col > <button ion-button color="light" (click)="add(3)" >3</button>  </ion-col>
+              <ion-col ><button  ion-button color="dark"(click)="addcaractere('+')">+</button></ion-col> 
+              <ion-col ><button  ion-button color="dark"(click)="addcaractere('-')">-</button></ion-col>
+           
+  </ion-row>
+  </ion-grid>
+  <ion-grid>
+      <ion-row>  
+          
+          <ion-col > <button ion-button  color="light" (click)="add(0)">0</button>  </ion-col>  
+            <ion-col > <button  ion-button color="light"(click)="addcaractere('.')">.</button>  </ion-col>  
+            <ion-col ><button  ion-button color="danger"   >=</button></ion-col>  
+            <ion-col > <button  ion-button color="dark"(click)="addcaractere('^')">^</button>  </ion-col> 
+              <ion-col ><button  ion-button color="dark"(click)="addcaractere('√')">√</button></ion-col> 
+              
+           
+  </ion-row>
+  </ion-grid>
+  <ion-item>
+    <p id="recevoir_saisi">recevoir_saisi{{recevoir_saisi}} </p>
+    <p id="nbre">nbre{{nbre}} </p>
+  </ion-item>
+</ion-content>
